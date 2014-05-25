@@ -28,6 +28,6 @@ class Busser::RunnerPlugin::Nose2 < Busser::RunnerPlugin::Base
   end
 
   def test
-    run!("nose2 --start-dir #{suite_path('nose2').to_s}")
+    run!("nose2 --start-dir #{suite_path('nose2').to_s}/tests")
   end
 end
