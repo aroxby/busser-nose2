@@ -25,6 +25,10 @@ require 'busser/runner_plugin'
 class Busser::RunnerPlugin::Nose2 < Busser::RunnerPlugin::Base
   postinstall do
     run!("pip install nose2")
+    if File.file?("#suite_path('nose2')/requirements.txt")
+	puts "Installing test requirements."
+	run!("pip install #suite_path('nose2')/requirements.txt")
+    end
   end
 
   def test
