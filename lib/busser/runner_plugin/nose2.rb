@@ -30,7 +30,7 @@ class Busser::RunnerPlugin::Nose2 < Busser::RunnerPlugin::Base
   def test
     if File.file?("#{suite_path('nose2')}/requirements.txt")
 	puts "Installing test requirements."
-	run!("pip install -r #suite_path('nose2')/requirements.txt")
+	run!("pip install -r #{suite_path('nose2')}/requirements.txt")
     end
     run!("nose2 --start-dir #{suite_path('nose2').to_s}/tests")
   end
