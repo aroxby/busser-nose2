@@ -23,6 +23,9 @@ require 'busser/runner_plugin'
 # @author Omer Katz <omer.drow@gmail.com>
 #
 class Busser::RunnerPlugin::Nose2 < Busser::RunnerPlugin::Base
+  postinstall do
+    run!("pip install nose2")
+  end
 
   def test
     run!("nose2 --start-dir #{suite_path('nose2').to_s}")
