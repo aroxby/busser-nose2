@@ -21,6 +21,6 @@ module Busser
   module Nose2
 
     # Version string for the Nose2 Busser runner plugin
-    VERSION = "0.1.4"
+    VERSION = "0.1.5"
   end
 end
