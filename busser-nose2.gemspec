@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'busser/nose2/version'
+require 'busser/nose/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'busser-nose2'
-  spec.version       = Busser::Nose2::VERSION
+  spec.name          = 'busser-nose'
+  spec.version       = Busser::Nose::VERSION
   spec.authors       = ['Omer Katz']
   spec.email         = ['omer@zimperium.com']
-  spec.description   = %q{A Busser runner plugin for Nose2}
+  spec.description   = %q{A Busser runner plugin for Nose}
   spec.summary       = spec.description
   spec.homepage      = ''
   spec.license       = 'Apache 2.0'

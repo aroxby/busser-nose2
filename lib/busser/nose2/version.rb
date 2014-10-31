@@ -18,9 +18,9 @@
 
 module Busser
 
-  module Nose2
+  module Nose
 
-    # Version string for the Nose2 Busser runner plugin
+    # Version string for the Nose Busser runner plugin
     VERSION = "0.1.6"
   end
 end

@@ -4,8 +4,8 @@ Feature: Plugin install command
   I want to run the postinstall for this plugin
 
   Background:
-    Given a test BUSSER_ROOT directory named "busser-nose2-install"
+    Given a test BUSSER_ROOT directory named "busser-nose-install"
 
   Scenario: Running the postinstall generator
-    When I run `busser plugin install busser-nose2 --force-postinstall`
+    When I run `busser plugin install busser-nose --force-postinstall`
     Then the exit status should be 0

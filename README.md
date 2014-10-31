@@ -1,6 +1,6 @@
-# <a name="title"></a> Busser::RunnerPlugin::Nose2
+# <a name="title"></a> Busser::RunnerPlugin::Nose
 
-A Busser runner plugin for Nose2
+A Busser runner plugin for Nose
 
 ## <a name="installation"></a> Installation and Setup
 

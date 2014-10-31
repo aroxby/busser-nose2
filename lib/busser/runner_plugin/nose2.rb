@@ -18,20 +18,20 @@
 
 require 'busser/runner_plugin'
 
-# A Busser runner plugin for Nose2.
+# A Busser runner plugin for Nose.
 #
 # @author Omer Katz <omer.drow@gmail.com>
 #
-class Busser::RunnerPlugin::Nose2 < Busser::RunnerPlugin::Base
+class Busser::RunnerPlugin::Nose < Busser::RunnerPlugin::Base
   postinstall do
-    run!("pip install nose2")
+    run!("pip install nose")
   end
 
   def test
-    if File.file?("#{suite_path('nose2')}/requirements.txt")
+    if File.file?("#{suite_path('nose')}/requirements.txt")
 	puts "Installing test requirements."
-	run!("pip install -r #{suite_path('nose2')}/requirements.txt")
+	run!("pip install -r #{suite_path('nose')}/requirements.txt")
     end
-    run!("nose2 --start-dir #{suite_path('nose2').to_s}/tests")
+    run!("nose --start-dir #{suite_path('nose').to_s}/tests")
   end
 end
