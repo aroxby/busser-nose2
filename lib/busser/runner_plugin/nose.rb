@@ -32,6 +32,6 @@ class Busser::RunnerPlugin::Nose < Busser::RunnerPlugin::Base
 	puts "Installing test requirements."
 	run!("pip install -r #{suite_path('nose')}/requirements.txt")
     end
-    run!("nose --start-dir #{suite_path('nose').to_s}/tests")
+    run!("nosetests #{suite_path('nose').to_s}/tests")
   end
 end
